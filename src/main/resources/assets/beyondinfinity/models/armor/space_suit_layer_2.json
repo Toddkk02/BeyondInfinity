@@ -1,0 +1,6 @@
+
+"parent": "minecraft:item/generated",
+"textures": {
+"layer0": "beyondinfinity:models/armor/space_suit_layer_2"
+}
+}

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "beyondinfinity:block/battery_block"
+    },
+    "facing=east": {
+      "model": "beyondinfinity:block/battery_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "beyondinfinity:block/battery_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "beyondinfinity:block/battery_block",
+      "y": 270
+    }
+  }
+}

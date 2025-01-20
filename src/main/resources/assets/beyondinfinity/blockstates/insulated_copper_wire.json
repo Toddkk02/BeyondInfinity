@@ -1,0 +1,31 @@
+{
+  "multipart": [
+    {
+      "apply": { "model": "beyondinfinity:block/insulated_copper_wire_core" }
+    },
+    {
+      "when": { "north": "true" },
+      "apply": { "model": "beyondinfinity:block/insulated_copper_wire_connection" }
+    },
+    {
+      "when": { "south": "true" },
+      "apply": { "model": "beyondinfinity:block/insulated_copper_wire_connection", "y": 180 }
+    },
+    {
+      "when": { "east": "true" },
+      "apply": { "model": "beyondinfinity:block/insulated_copper_wire_connection", "y": 90 }
+    },
+    {
+      "when": { "west": "true" },
+      "apply": { "model": "beyondinfinity:block/insulated_copper_wire_connection", "y": 270 }
+    },
+    {
+      "when": { "up": "true" },
+      "apply": { "model": "beyondinfinity:block/insulated_copper_wire_connection", "x": 270 }
+    },
+    {
+      "when": { "down": "true" },
+      "apply": { "model": "beyondinfinity:block/insulated_copper_wire_connection", "x": 90 }
+    }
+  ]
+}

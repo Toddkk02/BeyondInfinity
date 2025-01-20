@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "HPH",
+    "GBG",
+    "SSS"
+  ],
+  "key": {
+    "H": {
+      "item": "beyondinfinity:heavy_duty_plate"
+    },
+    "P": {
+      "item": "minecraft:glass_pane"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "S": {
+      "item": "beyondinfinity:steel_alloy"
+    }
+  },
+  "result": {
+    "item": "beyondinfinity:electrolysis_machinery",
+    "count": 1
+  }
+}

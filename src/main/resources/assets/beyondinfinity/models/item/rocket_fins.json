@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "steel": "beyondinfinity:block/steel_alloy"
+  },
+  "elements": [
+    {
+      "from": [7, 0, 0],
+      "to": [9, 8, 2],
+      "faces": {
+        "north": {"uv": [0, 0, 2, 8], "texture": "#steel"},
+        "east": {"uv": [0, 0, 2, 8], "texture": "#steel"},
+        "south": {"uv": [0, 0, 2, 8], "texture": "#steel"},
+        "west": {"uv": [0, 0, 2, 8], "texture": "#steel"},
+        "up": {"uv": [0, 0, 2, 2], "texture": "#steel"},
+        "down": {"uv": [0, 0, 2, 2], "texture": "#steel"}
+      }
+    },
+    {
+      "from": [6, 0, 2],
+      "to": [10, 6, 4],
+      "faces": {
+        "north": {"uv": [0, 0, 4, 6], "texture": "#steel"},
+        "east": {"uv": [0, 0, 2, 6], "texture": "#steel"},
+        "south": {"uv": [0, 0, 4, 6], "texture": "#steel"},
+        "west": {"uv": [0, 0, 2, 6], "texture": "#steel"},
+        "up": {"uv": [0, 0, 4, 2], "texture": "#steel"},
+        "down": {"uv": [0, 0, 4, 2], "texture": "#steel"}
+      }
+    }
+  ]
+}

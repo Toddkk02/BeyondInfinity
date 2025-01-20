@@ -1,0 +1,10 @@
+{
+  "type": "beyondinfinity:moon_type",
+  "generator": {
+    "type": "beyondinfinity:moon",
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "beyondinfinity:moon_biome"
+    }
+  }
+}

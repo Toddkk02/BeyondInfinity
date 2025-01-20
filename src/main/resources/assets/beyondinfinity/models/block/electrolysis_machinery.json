@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "north": "beyondinfinity:block/electolysis_machinery_front",
+    "south": "beyondinfinity:block/electolysis_machinery_all",
+    "east": "beyondinfinity:block/electolysis_machinery_all",
+    "west": "beyondinfinity:block/electolysis_machinery_input",
+    "up": "beyondinfinity:block/electolysis_machinery_all",
+    "down": "beyondinfinity:block/electolysis_machinery_all",
+    "particle": "beyondinfinity:block/electolysis_machinery_front"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "TTT",
+    "TGT",
+    "   "
+  ],
+  "key": {
+    "T": {
+      "item": "beyondinfinity:titanium_ingot"
+    },
+    "G": {
+      "item": "minecraft:glass_pane"
+    }
+  },
+  "result": {
+    "item": "beyondinfinity:space_suit_helmet",
+    "count": 1
+  }
+}

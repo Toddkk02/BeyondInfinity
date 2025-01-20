@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "SSS",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "minecraft:iron_block"
+    },
+    "S": {
+      "item": "beyondinfinity:steel_alloy"
+    }
+  },
+  "result": {
+    "item": "beyondinfinity:launch_pad",
+    "count": 9
+  }
+}

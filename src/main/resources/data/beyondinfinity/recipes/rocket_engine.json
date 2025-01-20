@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SPS",
+    "THT",
+    "TTT"
+  ],
+  "key": {
+    "S": {
+      "item": "beyondinfinity:steel_alloy"
+    },
+    "P": {
+      "item": "minecraft:piston"
+    },
+    "T": {
+      "item": "beyondinfinity:titanium_ingot"
+    },
+    "H": {
+      "item": "beyondinfinity:hydrogen_tank"
+    }
+  },
+  "result": {
+    "item": "beyondinfinity:rocket_engine",
+    "count": 1
+  }
+}

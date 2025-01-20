@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "beyondinfinity:item/insulated_copper_wire"
+  }
+}

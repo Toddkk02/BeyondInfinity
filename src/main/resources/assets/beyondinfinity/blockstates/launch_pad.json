@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "master=false": {
+      "model": "beyondinfinity:block/launch_pad"
+    },
+    "master=true": {
+      "model": "beyondinfinity:block/launch_pad"
+    }
+  }
+}

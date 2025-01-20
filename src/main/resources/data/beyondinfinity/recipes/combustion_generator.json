@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    "SFS",
+    "III"
+  ],
+  "key": {
+    "B": {
+      "item": "beyondinfinity:bronze_alloy"
+    },
+    "S": {
+      "item": "beyondinfinity:steel_alloy"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "beyondinfinity:combustion_generator",
+    "count": 1
+  }
+}

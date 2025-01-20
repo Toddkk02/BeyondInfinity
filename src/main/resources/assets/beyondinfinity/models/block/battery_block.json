@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "up": "beyondinfinity:block/battery_block_top",
+    "down": "beyondinfinity:block/battery_block_top",
+    "north": "beyondinfinity:block/battery_block",
+    "south": "beyondinfinity:block/battery_block",
+    "east": "beyondinfinity:block/battery_block_output",
+    "west": "beyondinfinity:block/battery_block_input",
+    "particle": "beyondinfinity:block/battery_block"
+  }
+}

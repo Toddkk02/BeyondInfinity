@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "beyondinfinity:block/electrolysis_machinery" },
+    "facing=south": { "model": "beyondinfinity:block/electrolysis_machinery", "y": 180 },
+    "facing=west":  { "model": "beyondinfinity:block/electrolysis_machinery", "y": 270 },
+    "facing=east":  { "model": "beyondinfinity:block/electrolysis_machinery", "y": 90 }
+  }
+}

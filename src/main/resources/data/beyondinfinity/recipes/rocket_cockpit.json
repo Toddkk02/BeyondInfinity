@@ -1,0 +1,27 @@
+
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GGG",
+    "GSG",
+    "THT"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:glass_pane"
+    },
+    "S": {
+      "item": "beyondinfinity:space_suit_helmet"
+    },
+    "T": {
+      "item": "beyondinfinity:titanium_ingot"
+    },
+    "H": {
+      "item": "beyondinfinity:heavy_duty_plate"
+    }
+  },
+  "result": {
+    "item": "beyondinfinity:rocket_cockpit",
+    "count": 1
+  }
+}

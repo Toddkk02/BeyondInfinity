@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "T T",
+    "TAT",
+    "   "
+  ],
+  "key": {
+    "T": {
+      "item": "beyondinfinity:titanium_ingot"
+    },
+    "A": {
+      "item": "beyondinfinity:aluminum_alloy"
+    }
+  },
+  "result": {
+    "item": "beyondinfinity:rocket_fins",
+    "count": 2
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "beyondinfinity:tin_ore",
+    "beyondinfinity:titanium_ore",
+    "beyondinfinity:lithium_ore",
+    "beyondinfinity:aluminium_ore"
+  ]
+}

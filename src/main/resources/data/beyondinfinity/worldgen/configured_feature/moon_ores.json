@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "size": 9,
+    "discard_chance_on_air_exposure": 0,
+    "targets": [
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "beyondinfinity:moon_rock"
+        },
+        "state": {
+          "Name": "beyondinfinity:aluminium_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "beyondinfinity:moon_rock"
+        },
+        "state": {
+          "Name": "beyondinfinity:lithium_ore"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "minecraft:block_match",
+          "block": "beyondinfinity:moon_rock"
+        },
+        "state": {
+          "Name": "beyondinfinity:tin_ore"
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "beyondinfinity:aluminum_ingot"
+    },
+    {
+      "item": "beyondinfinity:aluminum_ingot"
+    },
+    {
+      "item": "beyondinfinity:alloy_hammer"
+    }
+  ],
+  "result": {
+    "item": "beyondinfinity:aluminum_alloy",
+    "count": 1
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:block/block",
+  "textures": {
+    "particle": "beyondinfinity:block/insulated_copper_wire_rubber",
+    "rubber": "beyondinfinity:block/insulated_copper_wire_rubber",
+    "core": "beyondinfinity:block/copper_wire_core"
+  },
+  "elements": [
+    {
+      "from": [6, 6, 0],
+      "to": [10, 10, 6],
+      "faces": {
+        "north": {"uv": [6, 6, 10, 10], "texture": "#rubber"},
+        "east": {"uv": [0, 6, 6, 10], "texture": "#rubber"},
+        "south": {"uv": [6, 6, 10, 10], "texture": "#rubber"},
+        "west": {"uv": [0, 6, 6, 10], "texture": "#rubber"},
+        "up": {"uv": [6, 0, 10, 6], "texture": "#rubber"},
+        "down": {"uv": [6, 0, 10, 6], "texture": "#rubber"}
+      }
+    },
+    {
+      "from": [7, 7, 0],
+      "to": [9, 9, 7],
+      "faces": {
+        "north": {"uv": [7, 7, 9, 9], "texture": "#core"},
+        "east": {"uv": [0, 7, 7, 9], "texture": "#core"},
+        "south": {"uv": [7, 7, 9, 9], "texture": "#core"},
+        "west": {"uv": [0, 7, 7, 9], "texture": "#core"},
+        "up": {"uv": [7, 0, 9, 7], "texture": "#core"},
+        "down": {"uv": [7, 0, 9, 7], "texture": "#core"}
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+    "credit": "Made with Blockbench",
+    "texture_size": [64, 32],
+    "textures": {
+        "layer0": "beyondinfinity:models/armor/space_suit_layer_1"
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "HPH",
+    "TGT",
+    "HPH"
+  ],
+  "key": {
+    "H": {
+      "item": "beyondinfinity:heavy_duty_plate"
+    },
+    "P": {
+      "item": "minecraft:glass_pane"
+    },
+    "T": {
+      "item": "beyondinfinity:titanium_ingot"
+    },
+    "G": {
+      "item": "minecraft:glowstone"
+    }
+  },
+  "result": {
+    "item": "beyondinfinity:rocket_body",
+    "count": 1
+  }
+}

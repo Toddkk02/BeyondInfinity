@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "item": "minecraft:coal"
+    },
+    {
+      "item": "minecraft:iron_ingot"
+    },
+    {
+      "item": "beyondinfinity:alloy_hammer"
+    }
+  ],
+  "result": {
+    "item": "beyondinfinity:steel_alloy",
+    "count": 1
+  }
+}

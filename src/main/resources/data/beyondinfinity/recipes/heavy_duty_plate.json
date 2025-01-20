@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "beyondinfinity:titanium_ingot"
+    },
+    {
+      "item": "beyondinfinity:titanium_ingot"
+    },
+    {
+      "item": "beyondinfinity:steel_alloy"
+    },
+    {
+      "item": "beyondinfinity:alloy_hammer"
+    }
+  ],
+  "result": {
+    "item": "beyondinfinity:heavy_duty_plate",
+    "count": 1
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " T ",
+    "TTT",
+    "T T"
+  ],
+  "key": {
+    "T": {
+      "item": "beyondinfinity:titanium_ingot"
+    }
+  },
+  "result": {
+    "item": "beyondinfinity:rocket_nose_cone",
+    "count": 1
+  }
+}

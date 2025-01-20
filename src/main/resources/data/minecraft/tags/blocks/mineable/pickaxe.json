@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "beyondinfinity:tin_ore",
+    "beyondinfinity:titanium_ore",
+    "beyondinfinity:lithium_ore",
+    "beyondinfinity:aluminium_ore",
+    "beyondinfinity:combustion_generator",
+    "beyondinfinity:battery_block",
+    "beyondinfinity:electrolysis_machinery"
+  ]
+}

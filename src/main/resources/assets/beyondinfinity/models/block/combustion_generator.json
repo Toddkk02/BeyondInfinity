@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "beyondinfinity:block/combustion_generator_all",
+    "north": "beyondinfinity:block/combustion_generator_front",
+    "south": "beyondinfinity:block/combustion_generator_all",
+    "east": "beyondinfinity:block/combustion_generator_right",
+    "west": "beyondinfinity:block/combustion_generator_left",
+    "up": "beyondinfinity:block/combustion_generator_top",
+    "down": "beyondinfinity:block/combustion_generator_all"
+  }
+}

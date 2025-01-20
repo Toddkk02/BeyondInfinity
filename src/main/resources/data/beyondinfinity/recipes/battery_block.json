@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ARA",
+    "SLS",
+    "ARA"
+  ],
+  "key": {
+    "A": {
+      "item": "beyondinfinity:aluminum_alloy"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    },
+    "S": {
+      "item": "beyondinfinity:steel_alloy"
+    },
+    "L": {
+      "item": "beyondinfinity:lithium"
+    }
+  },
+  "result": {
+    "item": "beyondinfinity:battery_block",
+    "count": 1
+  }
+}

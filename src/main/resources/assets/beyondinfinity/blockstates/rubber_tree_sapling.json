@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "stage=0": {
+      "model": "beyondinfinity:block/rubber_tree_sapling"
+    },
+    "stage=1": {
+      "model": "beyondinfinity:block/rubber_tree_sapling"
+    }
+  }
+}

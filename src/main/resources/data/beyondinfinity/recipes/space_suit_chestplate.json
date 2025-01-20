@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "T T",
+    "TTT",
+    "TTT"
+  ],
+  "key": {
+    "T": {
+      "item": "beyondinfinity:titanium_ingot"
+    }
+  },
+  "result": {
+    "item": "beyondinfinity:space_suit_chestplate",
+    "count": 1
+  }
+}

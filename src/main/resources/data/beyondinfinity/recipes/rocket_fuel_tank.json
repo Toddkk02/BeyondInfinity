@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ATA",
+    "HHH",
+    "ATA"
+  ],
+  "key": {
+    "A": {
+      "item": "beyondinfinity:aluminum_alloy"
+    },
+    "T": {
+      "item": "beyondinfinity:titanium_ingot"
+    },
+    "H": {
+      "item": "beyondinfinity:hydrogen_tank"
+    }
+  },
+  "result": {
+    "item": "beyondinfinity:rocket_fuel_tank",
+    "count": 1
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "beyondinfinity:tin_ore"
+  },
+  "result": "beyondinfinity:tin_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

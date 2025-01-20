@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures":
+  {
+    "layer0": "beyondinfinity:item/heavy_duty_plate"
+  }
+}
