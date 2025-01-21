@@ -104,6 +104,7 @@ public class BeyondInfinity {
                 MenuScreens.register(ModMenuTypes.COMBUSTION_GENERATOR_MENU.get(), CombustionGeneratorScreen::new);
                 MenuScreens.register(ModMenuTypes.BATTERY_MENU.get(), BatteryScreen::new);
                 MenuScreens.register(ModMenuTypes.ELECTROLYSIS_GENERATOR_MENU.get(), ElectrolysisGeneratorScreen::new);
+
             });
         }
 

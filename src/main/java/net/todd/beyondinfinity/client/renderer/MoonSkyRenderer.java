@@ -39,132 +39,93 @@ public class MoonSkyRenderer extends DimensionSpecialEffects {
     @Override
     public boolean renderSky(ClientLevel level, int ticks, float partialTick, PoseStack poseStack,
                              Camera camera, Matrix4f projectionMatrix, boolean isFoggy, Runnable setupFog) {
+        setupFog.run();
 
         RenderSystem.enableBlend();
         RenderSystem.defaultBlendFunc();
         RenderSystem.depthMask(false);
 
-        // Renderizza lo sfondo nero dello spazio
+        // Sfondo nero
         renderBlackBackground(poseStack);
 
-        // Renderizza le stelle fisse
-        renderStars(level, partialTick, poseStack);
+        poseStack.pushPose();
+        poseStack.mulPose(Axis.ZP.rotationDegrees(180.0F));
+        float timeOfDay = level.getTimeOfDay(partialTick);
+        poseStack.mulPose(Axis.XP.rotationDegrees(timeOfDay * 360.0F));
 
-        // Renderizza la Via Lattea
-        renderMilkyWay(level, partialTick, poseStack);
+        // Stelle
+        RenderSystem.setShader(GameRenderer::getPositionTexShader);
+        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+        RenderSystem.setShaderTexture(0, STARS_TEXTURE);
+        renderTexturedSky(100.0F);
 
-        // Renderizza la Terra
-        renderEarth(level, partialTick, poseStack);
+        // Via Lattea
+        RenderSystem.setShaderTexture(0, MILKYWAY_TEXTURE);
+        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 0.5F);
+        renderTexturedSky(150.0F);
 
-        // Renderizza il Sole bianco
-        renderWhiteSun(level, partialTick, poseStack);
+        poseStack.pushPose();
+
+        // Terra
+        RenderSystem.setShaderTexture(0, EARTH_TEXTURE);
+        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+        poseStack.mulPose(Axis.YP.rotationDegrees((level.getDayTime() + partialTick) * 0.1F));
+        poseStack.translate(50.0D, 20.0D, 0.0D);
+        poseStack.mulPose(Axis.ZP.rotationDegrees(-23.5F));
+        renderCelestialBody(30.0F);
+
+        poseStack.popPose();
+
+        // Sole
+        RenderSystem.setShaderTexture(0, SUN_TEXTURE);
+        poseStack.mulPose(Axis.YP.rotationDegrees(timeOfDay * 360.0F));
+        poseStack.translate(100.0D, 0.0D, 0.0D);
+        renderCelestialBody(20.0F);
+
+        poseStack.popPose();
 
         RenderSystem.depthMask(true);
         RenderSystem.disableBlend();
+        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 
         return true;
     }
 
     private void renderBlackBackground(PoseStack poseStack) {
-        BufferBuilder bufferbuilder = Tesselator.getInstance().getBuilder();
         RenderSystem.setShader(GameRenderer::getPositionShader);
-        RenderSystem.setShaderColor(0.0F, 0.0F, 0.0F, 1.0F);
+        BufferBuilder bufferbuilder = Tesselator.getInstance().getBuilder();
+        float distance = 100.0F;
 
         bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION);
-        bufferbuilder.vertex(-100.0D, -100.0D, -100.0D).endVertex();
-        bufferbuilder.vertex(-100.0D, 100.0D, -100.0D).endVertex();
-        bufferbuilder.vertex(100.0D, 100.0D, -100.0D).endVertex();
-        bufferbuilder.vertex(100.0D, -100.0D, -100.0D).endVertex();
+        bufferbuilder.vertex(-distance, -distance, -distance).endVertex();
+        bufferbuilder.vertex(-distance, distance, -distance).endVertex();
+        bufferbuilder.vertex(distance, distance, -distance).endVertex();
+        bufferbuilder.vertex(distance, -distance, -distance).endVertex();
 
         Tesselator.getInstance().end();
     }
 
-    private void renderStars(ClientLevel level, float partialTick, PoseStack poseStack) {
+    private void renderTexturedSky(float scale) {
         BufferBuilder bufferbuilder = Tesselator.getInstance().getBuilder();
-        RenderSystem.setShader(GameRenderer::getPositionTexShader);
-        RenderSystem.setShaderTexture(0, STARS_TEXTURE);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 0.8F);
-
-        poseStack.pushPose();
-        poseStack.mulPose(Axis.XP.rotationDegrees(45.0F));
-
-        float scale = 100.0F;
         bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
-        renderCelestialPlane(bufferbuilder, scale);
-        Tesselator.getInstance().end();
 
-        poseStack.popPose();
+        bufferbuilder.vertex(-scale, 0, -scale).uv(0.0F, 0.0F).endVertex();
+        bufferbuilder.vertex(scale, 0, -scale).uv(1.0F, 0.0F).endVertex();
+        bufferbuilder.vertex(scale, 0, scale).uv(1.0F, 1.0F).endVertex();
+        bufferbuilder.vertex(-scale, 0, scale).uv(0.0F, 1.0F).endVertex();
+
+        Tesselator.getInstance().end();
     }
 
-    private void renderMilkyWay(ClientLevel level, float partialTick, PoseStack poseStack) {
+    private void renderCelestialBody(float scale) {
         BufferBuilder bufferbuilder = Tesselator.getInstance().getBuilder();
-        RenderSystem.setShader(GameRenderer::getPositionTexShader);
-        RenderSystem.setShaderTexture(0, MILKYWAY_TEXTURE);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 0.5F);
-
-        poseStack.pushPose();
-        poseStack.mulPose(Axis.ZP.rotationDegrees(45.0F));
-
-        float scale = 150.0F;
         bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
-        renderCelestialPlane(bufferbuilder, scale);
+
+        bufferbuilder.vertex(-scale, -scale, 0).uv(0.0F, 0.0F).endVertex();
+        bufferbuilder.vertex(scale, -scale, 0).uv(1.0F, 0.0F).endVertex();
+        bufferbuilder.vertex(scale, scale, 0).uv(1.0F, 1.0F).endVertex();
+        bufferbuilder.vertex(-scale, scale, 0).uv(0.0F, 1.0F).endVertex();
+
         Tesselator.getInstance().end();
-
-        poseStack.popPose();
-    }
-
-    private void renderEarth(ClientLevel level, float partialTick, PoseStack poseStack) {
-        BufferBuilder bufferbuilder = Tesselator.getInstance().getBuilder();
-        RenderSystem.setShader(GameRenderer::getPositionTexShader);
-        RenderSystem.setShaderTexture(0, EARTH_TEXTURE);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-
-        float earthRotation = (level.getDayTime() + partialTick) * 0.1F;
-
-        poseStack.pushPose();
-        poseStack.mulPose(Axis.YP.rotationDegrees(earthRotation));
-        poseStack.translate(50.0D, 20.0D, 0.0D);
-        poseStack.mulPose(Axis.ZP.rotationDegrees(-23.5F)); // Inclinazione asse terrestre
-
-        float scale = 30.0F;
-        bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
-        renderCelestialBody(bufferbuilder, scale);
-        Tesselator.getInstance().end();
-
-        poseStack.popPose();
-    }
-
-    private void renderWhiteSun(ClientLevel level, float partialTick, PoseStack poseStack) {
-        BufferBuilder bufferbuilder = Tesselator.getInstance().getBuilder();
-        RenderSystem.setShader(GameRenderer::getPositionTexShader);
-        RenderSystem.setShaderTexture(0, SUN_TEXTURE);
-        RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-
-        float celestialAngle = level.getTimeOfDay(partialTick);
-
-        poseStack.pushPose();
-        poseStack.mulPose(Axis.YP.rotationDegrees(celestialAngle * 360.0F));
-        poseStack.translate(100.0D, 0.0D, 0.0D);
-
-        float scale = 20.0F;
-        bufferbuilder.begin(VertexFormat.Mode.QUADS, DefaultVertexFormat.POSITION_TEX);
-        renderCelestialBody(bufferbuilder, scale);
-        Tesselator.getInstance().end();
-
-        poseStack.popPose();
-    }
-
-    private void renderCelestialPlane(BufferBuilder buffer, float size) {
-        buffer.vertex(-size, 0, -size).uv(0.0F, 0.0F).endVertex();
-        buffer.vertex(size, 0, -size).uv(1.0F, 0.0F).endVertex();
-        buffer.vertex(size, 0, size).uv(1.0F, 1.0F).endVertex();
-        buffer.vertex(-size, 0, size).uv(0.0F, 1.0F).endVertex();
-    }
-
-    private void renderCelestialBody(BufferBuilder buffer, float size) {
-        buffer.vertex(-size, -size, 0).uv(0.0F, 0.0F).endVertex();
-        buffer.vertex(size, -size, 0).uv(1.0F, 0.0F).endVertex();
-        buffer.vertex(size, size, 0).uv(1.0F, 1.0F).endVertex();
-        buffer.vertex(-size, size, 0).uv(0.0F, 1.0F).endVertex();
     }
 }
