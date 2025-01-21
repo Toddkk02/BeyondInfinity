@@ -1,5 +1,6 @@
 package net.todd.beyondinfinity.client;
 
+import net.minecraft.client.renderer.DimensionSpecialEffects;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterDimensionSpecialEffectsEvent;
@@ -12,8 +13,8 @@ import net.todd.beyondinfinity.client.renderer.MoonSkyRenderer;
 public class ClientHandler {
     @SubscribeEvent
     public static void registerDimensionEffects(RegisterDimensionSpecialEffectsEvent event) {
-        // Make sure this matches exactly with your dimension's resource location
-        ResourceLocation moonDimensionId = new ResourceLocation(BeyondInfinity.MODID, "moon");
-        event.register(moonDimensionId, new MoonSkyRenderer());
+        ResourceLocation moonKey = new ResourceLocation(BeyondInfinity.MODID, "moon");
+        event.register(moonKey, new MoonSkyRenderer());
+        BeyondInfinity.LOGGER.info("Sky renderer registered for dimension: {}", moonKey);
     }
 }

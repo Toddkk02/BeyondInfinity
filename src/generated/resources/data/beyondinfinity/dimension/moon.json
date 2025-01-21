@@ -4,7 +4,11 @@
     "type": "beyondinfinity:moon",
     "biome_source": {
       "type": "minecraft:fixed",
-      "biome": "beyondinfinity:moon_biome"
+      "biome": "minecraft:plains"
+    },
+    "settings": {
+      "base_height": 64,
+      "surface_material": "beyondinfinity:moon_surface"
     }
   }
 }
